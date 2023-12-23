@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="login.css">
+    <!--Log In Script-->
+    <script>
+        function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Simple validation (you should perform server-side validation in a real application)
+    if (username === '' || password === '') {
+        alert('Please enter both username and password');
+        return;
+    }
+
+    // Simulate a login request (replace this with actual login logic)
+    if (username === 'admin' && password === 'admin') {
+        alert('Login successful!');
+        // Redirect to the home page (replace 'home.html' with your actual home page URL)
+        window.location.href = 'index.html';
+    } else {
+        alert('Invalid username or password');
+    }
+}
+
+    </script>
+    <!--Log In Script-->
+    
+</head>
+<body>
+    <div class="login-background">
+        <div class="login-container">
+            <form class="login-form" id="loginForm">
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
